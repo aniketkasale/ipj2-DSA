@@ -14,7 +14,7 @@ class Stack {
     this.stack.pop();
   }
 
-  // Peek - return last element of stack
+  // Peek - return top element of stack
   peek() {
     return this.stack[this.stack.length - 1];
   }
@@ -58,4 +58,9 @@ console.log("initial stack", myStack);
 myStack.push(1);
 myStack.push(2);
 console.log("peek", myStack.peek());
-console.log("print", myStack.printStack());
+console.log("print\n", myStack.printStack());
+
+// peek 2
+// print
+// 1
+// 2
