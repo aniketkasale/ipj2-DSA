@@ -92,3 +92,20 @@ DoublyLinkedList.prototype.deleteLast = function (data, prev) {
     this.tail.next = null;
   }
 };
+
+DoublyLinkedList.prototype.reverse = function (data, prev) {
+  let current = this.head;
+  let temp = null;
+
+  while (current) {
+    temp = current.prev;
+    current.prev = current.next;
+    current.next = temp;
+    current = current.prev;
+  }
+
+  if (temp) {
+    this.tail = this.head;
+    this.head = temp.prev;
+  }
+};
