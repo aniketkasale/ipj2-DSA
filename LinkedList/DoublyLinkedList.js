@@ -78,3 +78,17 @@ DoublyLinkedList.prototype.deleteFirst = function (data, prev) {
     this.head.prev = null;
   }
 };
+
+DoublyLinkedList.prototype.deleteLast = function (data, prev) {
+  if (!this.tail) {
+    return null;
+  }
+
+  if (this.head === this.tail) {
+    this.head = null;
+    this.tail = null;
+  } else {
+    this.tail = this.tail.prev;
+    this.tail.next = null;
+  }
+};
