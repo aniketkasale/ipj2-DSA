@@ -44,3 +44,23 @@ DoublyLinkedList.prototype.insertAtEnd = function (data) {
 
   return newNode;
 };
+
+DoublyLinkedList.prototype.insertAfter = function (data, prev) {
+  if (!prev) {
+    return "Invalid Prev node";
+  }
+
+  const newNode = new Node(data, prev.next, prev);
+
+  if (prev.next) {
+    prev.next.prev = newNode;
+  }
+
+  prev.next = newNode;
+
+  if (!prev.next) {
+    this.tail = newNode;
+  }
+
+  return newNode;
+};
