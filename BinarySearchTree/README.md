@@ -6,4 +6,4 @@
 - Exactly one path between one root and any node
 - Empty tree can be considered as binary tree
 
-![alt text](binary-tree-to-DLL.png)
+![alt text](binary_tree.png)
