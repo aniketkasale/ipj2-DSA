@@ -64,3 +64,17 @@ DoublyLinkedList.prototype.insertAfter = function (data, prev) {
 
   return newNode;
 };
+
+DoublyLinkedList.prototype.deleteFirst = function (data, prev) {
+  if (!this.head) {
+    return null;
+  }
+
+  if (this.head === this.tail) {
+    this.head = null;
+    this.tail = null;
+  } else {
+    this.head = this.head.next;
+    this.head.prev = null;
+  }
+};
